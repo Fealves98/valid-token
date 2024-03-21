@@ -12,9 +12,9 @@ public class Claims {
 
     // TODO DEPOIS VER DE CONVERTER ISSO AQUI
 
-    private Integer Seed;
-
     private String Role;
+
+    private Integer Seed;
 
     private String Name;
 

@@ -1,4 +1,4 @@
-package br.com.itau.authentication.infrastructure.util;
+package br.com.itau.authentication.infrastructure.utils;
 
 import br.com.itau.authentication.application.interceptor.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;
@@ -11,9 +11,9 @@ import static java.util.regex.Pattern.matches;
 public class ValidationsUtil {
 
     /**
-     * Esse metodo util verifica se uma string possui caracteres numericos
-     * @param input string a ser validada
-     * @return no contexto atual da aplicação caso possua caractere numerico ele encerra a thread e retorna false ao usuario
+     * Este método utilitário verifica se uma string possui caracteres numéricos.
+     * @param input String a ser validada.
+     * @return No contexto atual da aplicação, caso possua caractere numérico, ele encerra a thread e retorna false ao usuário.
      */
     public static void containsNumbers(String input) {
         if (input.matches(".*\\d.*")) {
@@ -24,9 +24,9 @@ public class ValidationsUtil {
     }
 
     /**
-     * Esse metodo util verifica se o inteiro informado é um numero primo
-     * @param input numero a ser validado
-     * @return no contexto atual da aplicação caso não seja um numero primo ele encerra o a thread e retorna false ao usuario
+     * Este método utilitário verifica se o inteiro informado é um número primo.
+     * @param input Número a ser validado.
+     * @return No contexto atual da aplicação, caso não seja um número primo, ele encerra a thread e retorna false ao usuário.
      */
     public static void isPrime(Integer input) {
         if (input <= 1) {
@@ -43,9 +43,9 @@ public class ValidationsUtil {
         }
     }
     /**
-     * Esse metodo util verifica se a string possui mais de 256 caracteres
-     * @param input string a ser validada
-     * @return no contexto atual da aplicação caso caso possua msi de 256 ele encerra o a thread e retorna false ao usuario
+     * Este método utilitário verifica se a string possui mais de 256 caracteres.
+     * @param input String a ser validada.
+     * @return No contexto atual da aplicação, caso possua mais de 256 caracteres, ele encerra a thread e retorna false ao usuário.
      */
     public static void isValidLength(String input) {
         if (!matches("^.{0,255}$", input)) {
@@ -55,9 +55,9 @@ public class ValidationsUtil {
     }
 
     /**
-     * Esse metodo util verifica se a string é um Json
-     * @param input string a ser validada
-     * @return no contexto atual da aplicação caso não seja uma string ele encerra o a thread e retorna false ao usuario
+     * Este método utilitário verifica se a string é um JSON.
+     * @param input String a ser validada.
+     * @return No contexto atual da aplicação, caso não seja um JSON, ele encerra a thread e retorna false ao usuário.
      */
     public static void validatesIfItIsAJson(String input) {
         try {

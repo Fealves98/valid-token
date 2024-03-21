@@ -3,5 +3,15 @@ server:
   servlet:
     context-path: /ms-valid-token
 
+info:
+  app:
+    name: ms-valid-token
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
 
 

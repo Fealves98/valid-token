@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class TokenFacadeImpl implements TokenFacade {
 
-    private final TokenUseCase service;
+    private final TokenUseCase useCase;
 
     /**
      * Esse metodo é responsavel por orquestrar as chamadas necessaria para garantir a validação do token
@@ -26,13 +26,13 @@ public class TokenFacadeImpl implements TokenFacade {
     public TokenResponse validToken(TokenRequest request) {
         log.info("Token received: {}", request.getToken());
 
-        var extractToken = this.service.extractTokenBody(request.getToken());
+        String extractToken = this.useCase.extractTokenBody(request.getToken());
 
-        this.service.validatesPayloadClaims(extractToken);
+        this.useCase.validatesPayloadClaims(extractToken);
 
-        var convertedBody = new Gson().fromJson(extractToken, Claims.class);
+        Claims claims = new Gson().fromJson(extractToken, Claims.class);
 
-        this.service.validBodyValues(convertedBody);
+        this.useCase.validBodyValues(claims);
 
         log.info("Valid token");
 

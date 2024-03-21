@@ -1,6 +1,14 @@
 # Change Log
 
-## [Versão 1.0.0] - 2024-03-20
+## [version 1.0.1] - 2024-03-21
+
+### added
+- Validação no body para não permir body nulo ou em branco
+- melhorias no codigo
+- criação de testes unitarios e integração
+- criação de recursos para monitoria da aplicação
+
+## [version 1.0.0] - 2024-03-20
 
 ### added
 desenvolvido a funcionalidade para validação de token seguindo as seguintes regras

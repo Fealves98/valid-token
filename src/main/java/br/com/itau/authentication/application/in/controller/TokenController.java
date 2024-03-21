@@ -5,7 +5,6 @@ import br.com.itau.authentication.domain.models.TokenRequest;
 import br.com.itau.authentication.domain.models.TokenResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.http.HttpStatus.OK;
@@ -20,7 +19,7 @@ public class TokenController {
 
     @ResponseStatus(OK)
     @PostMapping("/token")
-    public TokenResponse validToken(@RequestBody @Validated TokenRequest request) {
+    public TokenResponse validToken(@RequestBody TokenRequest request) {
         log.info("------------------------");
         return facade.validToken(request);
     }
