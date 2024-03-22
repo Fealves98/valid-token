@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.itau</groupId>
-	<artifactId>authentication</artifactId>
-	<version>1.0.2</version>
+	<artifactId>valid-token</artifactId>
+	<version>1.0.3</version>
 	<name>authentication</name>
 	<description> Project responsible for validating JWT tokens following the Itau bank guidelines</description>
 	<properties>
