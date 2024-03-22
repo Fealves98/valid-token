@@ -1,0 +1,53 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: authorization
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: authorization
+  template:
+    metadata:
+      labels:
+        app: authorization
+    spec:
+      containers:
+        - name: authorization
+          image: #endereco_do_artifactory/authentication-1.0.10:latest
+          ports:
+            - containerPort: 8080
+---
+# service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: authorization
+spec:
+  selector:
+    app: authorization
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+---
+# ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: authorization
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: # DNS
+      http:
+        paths:
+          - path: /ms-valid-token
+            pathType: Prefix
+            backend:
+              service:
+                name: authorization
+                port:
+                  number: 8080

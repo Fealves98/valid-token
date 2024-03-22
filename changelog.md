@@ -1,5 +1,14 @@
 # Change Log
 
+
+
+## [version 1.0.2] - 2024-03-21
+
+### added
+- Implementação do OTEL para observabilidade da aplicação
+- Contenerização da aplicação com docker
+- analise de cobertura de testes com jacoco
+
 ## [version 1.0.1] - 2024-03-21
 
 ### added
