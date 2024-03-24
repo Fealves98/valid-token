@@ -33,7 +33,7 @@ Após as primeiras execuções, o OTEL começará a ingesta dentro do Jaeger.
 
 ### Outras formas de execução
 
-Caso não queira executar um contêiner Docker na sua máquina, você pode executar o projeto de
+Caso não queira executar um contêiner Docker na sua máquina, você pode executar o projeto pela sua propria ide, executando a classe main
 
 ![img_4.png](img_4.png)
 
