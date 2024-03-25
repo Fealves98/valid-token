@@ -1,4 +1,4 @@
-package br.com.itau.validToken.infrastructure.utils;
+package br.com.itau.validToken.application.utils;
 
 import br.com.itau.validToken.application.interceptor.exception.BusinessException;
 import lombok.extern.slf4j.Slf4j;

@@ -1,13 +1,11 @@
 # Change Log
 
 
-## [version 1.0.3] - 2024-03-22
+## [version 1.0.4] - 2024-03-25
+### change
+- alteração na organização da pasta utils, transferindo ela para application para ter mais coerencia com o contexto da aplicação
 
-- Inclusão de README.md atualizada
-- inserção na raiz do projeto evidencias da funcionalidade
-- Validação da entrada do projeto para não permitir inputs que não estejam no formato JWT
-- alteração na estrutura de pastas do projeto
-- inserção de collections do postman para consumo da API
+## [version 1.0.3] - 2024-03-22
 
 ### added
 - Implementação do OTEL para observabilidade da aplicação

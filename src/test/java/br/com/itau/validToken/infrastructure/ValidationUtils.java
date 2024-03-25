@@ -1,9 +1,9 @@
-package br.com.itau.validToken.infrastructure.utils;
+package br.com.itau.validToken.infrastructure;
 
 import br.com.itau.validToken.application.interceptor.exception.BusinessException;
 import org.junit.jupiter.api.Test;
 
-import static br.com.itau.validToken.infrastructure.utils.ValidationsUtil.*;
+import static br.com.itau.validToken.application.utils.ValidationsUtil.*;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 

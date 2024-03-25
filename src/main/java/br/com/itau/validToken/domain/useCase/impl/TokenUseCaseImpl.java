@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.Set;
 
 import static br.com.itau.validToken.domain.enums.RolesEnum.contains;
-import static br.com.itau.validToken.infrastructure.utils.ValidationsUtil.*;
+import static br.com.itau.validToken.application.utils.ValidationsUtil.*;
 import static java.util.Base64.getUrlDecoder;
 
 @Service
