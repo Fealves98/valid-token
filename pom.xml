@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.itau</groupId>
 	<artifactId>valid-token</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<name>authentication</name>
 	<description> Project responsible for validating JWT tokens following the Itau bank guidelines</description>
 	<properties>
